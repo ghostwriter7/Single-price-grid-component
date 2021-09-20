@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--light-gray);
+}
+
+main {
+  margin: 2rem 2rem;
+  width: min(100%, 650px);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.1),
+    15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+main > div {
+  padding: 1rem;
+}
+@media screen and (min-width: 550px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .header {
+    grid-column: span 2;
+  }
+  main > div {
+    padding: 2.5rem;
+  }
+}
+.header {
+  background-color: #fff;
+}
+.header h1 {
+  color: var(--cyan);
+  font-size: 1.2rem;
+  margin-block: 0.5rem 1.5rem;
+}
+
+.header .subtitle {
+  color: var(--bright-yellow);
+  font-weight: 700;
+  margin-block: 0.35rem;
+  font-size: 1rem;
+}
+
+.header .text {
+  color: var(--grayish-blue);
+  font-size: 11px;
+  line-height: 1.8em;
+  margin-block: 0.5rem;
+  width: min(100%, 500px);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content h2 {
+  color: var(--light-gray);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  color: var(--light-gray);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.label {
+  color: var(--light-gray);
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+p.description {
+  opacity: 0.9;
+  color: var(--light-gray);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  background-color: var(--bright-yellow);
+  color: var(--light-gray);
+  padding: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: 3px solid transparent;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.1),
+    5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background-color: transparent;
+  border: 3px solid var(--bright-yellow);
+  color: var(--bright-yellow);
+}
+
+.content li {
+  list-style-type: none;
+  color: var(--light-gray);
+  opacity: 0.8;
+  line-height: 1.7em;
+  font-size: 13px;
+}
+
+@media (min-width: 800px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .header .subtitle {
+    font-size: 1rem;
+  }
+  .header .text {
+    font-size: 15px;
+    max-width: 90%;
+  }
+}
+.subscription {
+  background-color: var(--cyan);
+}
+.why-us {
+  background-color: var(--cyan);
+  opacity: 0.8;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+}
